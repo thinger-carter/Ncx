@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D19E7A03-87DD-4950-9296-9E7D0161EF38}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ncx</RootNamespace>
+    <AssemblyName>Ncx</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.9.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.4.9.2\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Extras.DynamicProxy, Version=4.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.Extras.DynamicProxy.4.5.0\lib\net45\Autofac.Extras.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Castle.Core.4.3.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Entities\Audit\AuditedEntity.cs" />
+    <Compile Include="Core\Entities\Audit\AuditedEntityOfPrimaryKey.cs" />
+    <Compile Include="Core\Entities\Audit\IAudited.cs" />
+    <Compile Include="Core\Entities\Audit\ICreationAudited.cs" />
+    <Compile Include="Core\Entities\Audit\IModicationAudited.cs" />
+    <Compile Include="Core\Entities\Entity.cs" />
+    <Compile Include="Core\Entities\EntityOfPrimaryKey.cs" />
+    <Compile Include="Core\Entities\IEntity.cs" />
+    <Compile Include="Core\Entities\IEntityOfPrimaryKey.cs" />
+    <Compile Include="Core\Repisitories\IRepository.cs" />
+    <Compile Include="Core\Repisitories\IRepositoryOfEntityAndPrimaryKey.cs" />
+    <Compile Include="Core\Uow\IUnitOfWork.cs" />
+    <Compile Include="Core\Uow\UnitOfWorkAttribute.cs" />
+    <Compile Include="Core\Uow\UnitOfWorkHelper.cs" />
+    <Compile Include="Core\Uow\UnitOfWorkScope.cs" />
+    <Compile Include="Dependency\Register\DependencyRegister.cs" />
+    <Compile Include="Dependency\Register\DependencyRegisterContext.cs" />
+    <Compile Include="Dependency\ILifetimeScopeDependency.cs" />
+    <Compile Include="Dependency\IocHelper.cs" />
+    <Compile Include="Dependency\IocManager.cs" />
+    <Compile Include="Dependency\ISingleDependency.cs" />
+    <Compile Include="Dependency\Register\IDependencyRegister.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
