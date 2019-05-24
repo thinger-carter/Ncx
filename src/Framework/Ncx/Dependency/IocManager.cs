@@ -15,6 +15,8 @@ namespace Ncx.Dependency
 
 		public ContainerBuilder IocContainer { get; private set; }
 
+		public ILifetimeScope LifetimeScope { get;private set; }
+
 		private IocManager()
 		{
 			IocContainer=new ContainerBuilder();
@@ -24,6 +26,13 @@ namespace Ncx.Dependency
 		{
 			Instance=new IocManager();
 		}
+
+		public void SetLifeScope(ILifetimeScope lifetimeScope)
+		{
+			LifetimeScope = lifetimeScope;
+		}
+
+
 
 		public void RegisterAssembly(Assembly assembly,ContainerBuilder iocContainer)
 		{

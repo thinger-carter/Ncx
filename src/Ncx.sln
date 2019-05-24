@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NcxSample.Service", "Sample
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NcxSample.WebApi", "Sample\NcxSample.WebApi\NcxSample.WebApi.csproj", "{27513BAD-7F86-4F4F-8407-2EBA4588FC3E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ncx.Web", "Framework\Ncx.Web\Ncx.Web.csproj", "{C50C6112-4A9D-42B7-8F2A-A602F4B70193}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{27513BAD-7F86-4F4F-8407-2EBA4588FC3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27513BAD-7F86-4F4F-8407-2EBA4588FC3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27513BAD-7F86-4F4F-8407-2EBA4588FC3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C50C6112-4A9D-42B7-8F2A-A602F4B70193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C50C6112-4A9D-42B7-8F2A-A602F4B70193}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C50C6112-4A9D-42B7-8F2A-A602F4B70193}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C50C6112-4A9D-42B7-8F2A-A602F4B70193}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{D4AAEC7C-C776-4251-845F-69A78A12EB19} = {40B7CC98-912B-4DC4-8080-32006B52586C}
 		{33676977-5CBD-411A-992D-E62F3DBDAA8D} = {40B7CC98-912B-4DC4-8080-32006B52586C}
 		{27513BAD-7F86-4F4F-8407-2EBA4588FC3E} = {40B7CC98-912B-4DC4-8080-32006B52586C}
+		{C50C6112-4A9D-42B7-8F2A-A602F4B70193} = {A640C7C4-3F1C-4D72-B20D-6B0647D699DC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E5C1539-3D41-4AAF-9257-42AA208E5A37}

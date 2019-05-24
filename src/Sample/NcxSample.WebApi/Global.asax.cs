@@ -1,18 +1,13 @@
 using Ncx.Dependency;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Web;
 using System.Web.Http;
-using System.Web.Routing;
 using Autofac;
+using Autofac.Integration.WebApi;
 using NcxSample.Service;
 using NcxSample.Service.User;
 
 namespace NcxSample.WebApi
 {
-    public class WebApiApplication : System.Web.HttpApplication
+	public class WebApiApplication : System.Web.HttpApplication
     {
         protected void Application_Start()
         {
@@ -20,10 +15,9 @@ namespace NcxSample.WebApi
 
             IocManager.Instance.IocContainer.RegisterModule<ServiceModule>();
           var container=   IocManager.Instance.IocContainer.Build();
-          using (var scope= container.BeginLifetimeScope())
-          {
-	          var service = scope.Resolve<IUserServcie>();
-          }
+          var resolver = new AutofacWebApiDependencyResolver(container);
+          var servcie = resolver.Container.Resolve<IUserServcie>();
+
         }
     }
 }

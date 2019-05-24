@@ -46,6 +46,9 @@
     <Reference Include="Autofac, Version=4.9.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Autofac.4.9.2\lib\net45\Autofac.dll</HintPath>
     </Reference>
+    <Reference Include="Autofac.Integration.WebApi, Version=4.2.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.WebApi2.4.2.1\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
@@ -111,6 +114,10 @@
     <ProjectReference Include="..\..\Framework\Ncx\Ncx.csproj">
       <Project>{D19E7A03-87DD-4950-9296-9E7D0161EF38}</Project>
       <Name>Ncx</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NcxSample.Service\NcxSample.Service.csproj">
+      <Project>{33676977-5CBD-411A-992D-E62F3DBDAA8D}</Project>
+      <Name>NcxSample.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
